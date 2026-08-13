@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { X, Check } from "lucide-react";
-import { LanguageModal.tsx } from "@/types";
+import { Language } from "@/types";
 import { fetchLanguages, switchLanguage } from "@/lib/api";
 import { sound } from "@/lib/audio";
 
