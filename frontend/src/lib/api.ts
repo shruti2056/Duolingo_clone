@@ -37,4 +37,4 @@ export async function decrementHeart(){ return (await request("/api/user/hearts/
 export async function refillHearts(method:"gems"|"practice"="gems"){ return (await request(`/api/user/hearts/refill?method=${method}`,{method:"POST"})).json(); }
 export async function fetchLeaderboard():Promise<LeaderboardUser[]>{ return (await request("/api/leaderboard")).json(); }
 export async function fetchAchievements():Promise<Achievement[]>{ return (await request("/api/achievements")).json(); }
-export async function resetDatabase(){ return (await request("/api/ reset",{method:"POST"})).json(); }
+export async function resetDatabase(){ return (await request("/reset",{method:"POST"})).json(); }
