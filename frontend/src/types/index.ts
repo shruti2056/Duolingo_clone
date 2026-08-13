@@ -100,4 +100,6 @@ export interface Language {
   id: number;
   name: string;
   code: string;
+  flag_icon: string;
+  description: string;
 }

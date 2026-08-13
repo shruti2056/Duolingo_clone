@@ -30,7 +30,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
 
     try {
       if (mode === "login") {
-        await login(identifier , password);
+        await login(username , password);
       } else {
         await signup({ username, name, email, password });
       }
