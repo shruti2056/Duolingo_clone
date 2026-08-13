@@ -95,3 +95,9 @@ export interface Achievement {
   current_progress: number;
   is_unlocked: boolean;
 }
+
+export interface Language {
+  id: number;
+  name: string;
+  code: string;
+}
