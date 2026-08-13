@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { X, Check } from "lucide-react";
-import { Language } from "@/types";
-import { fetchLanguage, switchLanguage } from "@/lib/api";
+import { LanguageModal.tsx } from "@/types";
+import { fetchLanguages, switchLanguage } from "@/lib/api";
 import { sound } from "@/lib/audio";
 
 interface LanguageModalProps {
