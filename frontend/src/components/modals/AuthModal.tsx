@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { X, UserCheck, LogIn, UserPlus } from "lucide-react";
-import { loginUser, registerUser } from "@/lib/api";
+import { login, register } from "@/lib/api";
 import { sound } from "@/lib/audio";
 
 interface AuthModalProps {
@@ -30,9 +30,9 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
 
     try {
       if (mode === "login") {
-        await loginUser({ username, password });
+        await login({ username, password });
       } else {
-        await registerUser({ username, name, email, password });
+        await register({ username, name, email, password });
       }
       sound.playCorrect();
       onSuccess();

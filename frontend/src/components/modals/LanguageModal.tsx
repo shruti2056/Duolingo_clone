@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { X, Check } from "lucide-react";
-import { Language } from "@/types";
-import { fetchLanguages, selectLanguage } from "@/lib/api";
+import { Languages } from "@/types";
+import { fetchLanguages, switchLanguage } from "@/lib/api";
 import { sound } from "@/lib/audio";
 
 interface LanguageModalProps {
@@ -30,7 +30,7 @@ export default function LanguageModal({ isOpen, currentLanguageId, onClose, onSe
   const handleSelect = async (lang: Language) => {
     sound.playTap();
     try {
-      await selectLanguage(lang.id);
+      await switchLanguage(lang.id);
       sound.playCorrect();
       onSelectLanguage(lang);
       onClose();
